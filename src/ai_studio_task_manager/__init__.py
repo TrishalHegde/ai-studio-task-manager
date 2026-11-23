@@ -2,7 +2,6 @@ tasks=[]
 def add_task():
     task=input("Enter a task: ")
     tasks.append(task)
-    print("Task added sucessfully ")
 def view_tasks():
     print("Your task are :")
     if len(tasks)==0:
