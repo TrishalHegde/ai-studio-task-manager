@@ -12,10 +12,19 @@ def view_tasks():
         for i, task in enumerate(tasks):
             print(f"{i+1}. {task}")
 def delete_task():
+    if len(tasks) == 0:
+        print("No tasks available to delete.")
+        return
     view_tasks()
-    task_number = int(input("Enter task number to delete: "))
-    removed_task = tasks.pop(task_number - 1)
-    print(f"Deleted task: {removed_task}")           
+    try:
+        task_number = int(input("Enter task number to delete: "))
+        if task_number < 1 or task_number > len(tasks):
+            print("Invalid task number.")
+            return
+        removed_task = tasks.pop(task_number - 1)
+        print(f"Deleted task: {removed_task}")
+    except ValueError:
+        print("Please enter a valid number.")          
 
 def main():
     while True:
