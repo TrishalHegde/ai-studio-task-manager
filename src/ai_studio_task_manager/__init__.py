@@ -2,9 +2,7 @@ tasks=[]
 def add_task():
     task=input("Enter a task: ")
     tasks.append(task)
-    print("Task added sucessfully ")
 def view_tasks():
-    print("Your task are :")
     if len(tasks)==0:
         print("No tasks available")
     else:
@@ -25,6 +23,6 @@ def main():
         elif choice == "3":
             break
         else:
-            print("Invalid option. Please try again.")
+            print("Invalid option.")
 if __name__=="__main__":
     main()
