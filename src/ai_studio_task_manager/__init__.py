@@ -3,7 +3,6 @@ def add_task():
     task=input("Enter a task: ")
     tasks.append(task)
 def view_tasks():
-    print("Your task are :")
     if len(tasks)==0:
         print("No tasks available")
     else:
